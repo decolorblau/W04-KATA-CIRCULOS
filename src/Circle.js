@@ -1,7 +1,21 @@
-const Circle = ({ className }) => {
+import { useState } from "react";
+
+const Circle = () => {
+  const [className, setClassName] = useState("off");
+  const [state, setState] = useState("false");
+
+  function actionOnClick() {
+    setState(!state);
+    setClassName(state === false ? "on" : "off");
+  }
+
   return (
     <>
-      <div className={className}></div>
+      <button
+        className={className}
+        state={state}
+        onClick={actionOnClick}
+      ></button>
     </>
   );
 };

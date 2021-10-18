@@ -4,11 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.active {
+.on {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: grey;
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
+}
+.off {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgb(130, 130, 130);
+  cursor: pointer;
 }
