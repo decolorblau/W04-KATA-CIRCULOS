@@ -2,22 +2,39 @@ import { useState } from "react";
 
 const Circle = () => {
   const [className, setClassName] = useState("off");
-  const [state, setState] = useState("false");
+  const [Selected, setSelected] = useState("false");
 
   function actionOnClick() {
-    setState(!state);
-    setClassName(state === false ? "on" : "off");
+    setSelected(!Selected);
+    setClassName(Selected === false ? "off" : "on");
   }
 
   return (
     <>
-      <button
+      <div
         className={className}
-        state={state}
+        Selected={Selected}
         onClick={actionOnClick}
-      ></button>
+      ></div>
     </>
   );
 };
+
+//EXERCICI FET PER EN MARIO:
+
+/* const Circle = () => {
+  const [Selected, setSelected] = useState("false");
+  const togleSelected = () => {
+    setSelected = !Selected;
+  };
+  return (
+    <>
+      <div
+        className={`circle ${elected === false ? "on" : ""}`}
+        onClick={togleSelected}
+      ></div>
+    </>
+  );
+}; */
 
 export default Circle;
